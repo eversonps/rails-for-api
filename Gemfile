@@ -10,6 +10,10 @@ gem 'rails-i18n'
 gem 'sqlite3'
 
 gem 'rack-cors'
+
+gem 'foreman'
+
+gem 'active_model_serializers', '~> 0.10.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
