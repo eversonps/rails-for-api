@@ -1,6 +1,10 @@
 class KindsController < ApplicationController
-  before_action :set_kind, only: [:show, :update, :destroy]
+  # include ActionController::HttpAuthentication::Token::ControllerMethods
 
+  before_action :set_kind, only: [:show, :update, :destroy]
+  before_action :authenticate_user!
+
+  # before_action :authenticate
   # GET /kinds
   def index
     @kinds = Kind.all
@@ -53,4 +57,15 @@ class KindsController < ApplicationController
     def kind_params
       params.require(:kind).permit(:description)
     end
+
+    # def authenticate
+    #   authenticate_or_request_with_http_token do |token, options|
+    #     hmac_secret = "shi_é_segredo"
+    #     JWT.decode token, hmac_secret, true, { :algorithm => 'HS256' }
+    #     #   ActiveSupport::SecurityUtils.secure_compare(
+    #     #     ::Digest::SHA256.hexdigest(token),
+    #     #     ::Digest::SHA256.hexdigest(TOKEN)
+    #     #   )
+    #   end
+    # end
 end

@@ -13,6 +13,12 @@ gem 'rack-cors'
 
 gem 'foreman'
 
+gem 'jwt'
+
+gem 'devise_token_auth'
+
+gem 'devise-i18n'
+
 gem 'active_model_serializers', '~> 0.10.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
