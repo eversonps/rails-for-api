@@ -1,3 +1,4 @@
+module V2
 class PhonesController < ApplicationController
   before_action :set_contact
 
@@ -43,4 +44,5 @@ class PhonesController < ApplicationController
     def phone_params
       ActiveModelSerializers::Deserialization.jsonapi_parse(params)
     end
+end
 end

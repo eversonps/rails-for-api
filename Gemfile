@@ -19,6 +19,8 @@ gem 'devise_token_auth'
 
 gem 'devise-i18n'
 
+gem 'versionist'
+
 gem 'active_model_serializers', '~> 0.10.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
