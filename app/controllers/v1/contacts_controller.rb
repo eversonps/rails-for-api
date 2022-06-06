@@ -11,8 +11,8 @@ module V1
 
       # expires_in 30.seconds, public: true
 
-      if stale?(last_modified: @contacts[0].updated_at)
-        render json: @contacts
+      if stale?(etag: @contacts)
+        render  json: @contacts #, methods: :birthdate_br #[:hello, :i18n]
       end
 
       #, include: [:kind, :phones, :address] #, methods: [:hello, :i18n]
@@ -20,7 +20,7 @@ module V1
 
     # GET /contacts/1
     def show
-      render json: @contact, include: [:kind, :address, :phones] #, meta: {author: "Everson"}
+      render json: @contact #, include: [:kind, :address, :phones] #, meta: {author: "Everson"}
     end
 
     # POST /contacts

@@ -9,7 +9,7 @@ class Contact < ApplicationRecord
   paginates_per 5
   
   validates_presence_of :kind
-  validates_presence_of :address
+  # validates_presence_of :address
 
   
   # def to_br
