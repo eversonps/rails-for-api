@@ -21,6 +21,10 @@ gem 'devise-i18n'
 
 gem 'versionist'
 
+gem 'kaminari'
+
+gem 'api-pagination'
+
 gem 'active_model_serializers', '~> 0.10.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

@@ -6,6 +6,8 @@ class Contact < ApplicationRecord
   accepts_nested_attributes_for :phones, allow_destroy: true
   accepts_nested_attributes_for :address, update_only: true
 
+  paginates_per 5
+
   
   # def to_br
   #   { 
