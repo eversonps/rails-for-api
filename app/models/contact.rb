@@ -7,6 +7,9 @@ class Contact < ApplicationRecord
   accepts_nested_attributes_for :address, update_only: true
 
   paginates_per 5
+  
+  validates_presence_of :kind
+  validates_presence_of :address
 
   
   # def to_br
